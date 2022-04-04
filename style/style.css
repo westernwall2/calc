@@ -253,6 +253,18 @@ label {
 
 }
 
+img {
+	display: none;
+}
+
+strong:hover + img{
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+}
+
 @media (max-width: 720px) {
 	label {
 		font-size: 12px;
