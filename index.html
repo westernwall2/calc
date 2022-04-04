@@ -1,138 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Calculadora De Lucro</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/style.css">
+	<title>Calculadora De Lucro</title>
 </head>
+
 <body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <h2>Calculo de Markup/Margem</h2>
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h2>Margem</h2>
-			<div class="social-container">
-				<label for="custo">Custo</label>
-				<input class="input-medium focused span6 calc" name="custo" id="custo" type="text" placeholder="0,00" value=""/>
-				<label for="margem">Margem</label>
-				<input class="input-medium focused span6 calc" name="margem" id="margem"  type="text" placeholder="0,00" value=""/>
-				<label for="venda">Venda</label>
-				<input class="input-medium focused span6 result" name="venda" id="venda" readonly="readonly" type="text" placeholder="0,00" value=""/>
-				<div>Outros Valores</div>
-				<label for="taxa">Taxa%</label>
-				<input class="input-medium focused span6 calc" name="taxa" id="taxa"  type="text" placeholder="0,00" value=""/>
-				<label for="frete">Frete</label>
-				<input class="input-medium focused span6 calc" name="frete" id="frete"  type="text" placeholder="0,00" value=""/>
-				<label for="markup">Markup</label>
-				<input class="input-medium focused span6 calc" name="markup" id="markup" readonly="readonly" type="text" placeholder="0,00" value=""/>
-				<button type="reset">Limpar</button>
-			</div>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h2>Markup</h2>
-			<div class="social-container">
-				<label for="custo0">Custo</label>
-				<input class="input-medium focused span6 calc" name="custo0" id="custo0" type="text" placeholder="0,00" value=""/>
-				<label for="markup0">Markup</label>
-				<input class="input-medium focused span6 calc" name="markup0" id="markup0"  type="text" placeholder="0,00" value=""/>
-				<label for="venda0">Venda</label>
-				<input class="input-medium focused span6 result" name="venda0" id="venda0" readonly="readonly" type="text" placeholder="0,00" value=""/>
-				<div>Outros Valores</div>
-				<label for="taxa0">Taxa%</label>
-				<input class="input-medium focused span6 calc" name="taxa0" id="taxa0"  type="text" placeholder="0,00" value=""/>
-				<label for="frete0">Frete</label>
-				<input class="input-medium focused span6 calc" name="frete0" id="frete0"  type="text" placeholder="0,00" value=""/>
-				<label for="margem0">Margem</label>
-				<input class="input-medium focused span6 calc" name="margem0" id="margem0" readonly="readonly" type="text" placeholder="0,00" value=""/>
-				<button type="reset">Limpar</button>
-			</div>			
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Margem?</h1>
-				<p>Margem de lucro é um valor absoluto, cujo cálculo é feito com o preço de venda já formado, mostrando qual foi a rentabilidade obtida.</p>
-				<button class="ghost" id="signIn">Markup?</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Markup?</h1>
-				<p>Markup é um indicador, calculado em percentual, que auxilia a formar o preço de venda.</p>
-				<button class="ghost" id="signUp">Margem?</button>
+	<h2>Calculo de Markup/Margem</h2>
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+			<form action="#">
+				<h2>Margem</h2>
+				<div class="social-container">
+					<label for="custo">Custo</label>
+					<input class="input-medium focused span6 calc" name="custo" id="custo" type="text"
+						placeholder="0,00" value="" />
+					<label for="margem">Margem</label>
+					<input class="input-medium focused span6 calc" name="margem" id="margem" type="text"
+						placeholder="0,00" value="" />
+					<label for="venda">Venda</label>
+					<input class="input-medium focused span6 result" name="venda" id="venda" readonly="readonly"
+						type="text" placeholder="0,00" value="" />
+					<div>Outros Valores</div>
+					<label for="taxa">Taxa%</label>
+					<input class="input-medium focused span6 calc" name="taxa" id="taxa" type="text" placeholder="0,00"
+						value="" />
+					<label for="frete">Frete</label>
+					<input class="input-medium focused span6 calc" name="frete" id="frete" type="text"
+						placeholder="0,00" value="" />
+					<label for="markup">Markup</label>
+					<input class="input-medium focused span6 calc" name="markup" id="markup" readonly="readonly"
+						type="text" placeholder="0,00" value="" />
+					<button type="reset">Limpar</button>
+				</div>
+			</form>
+		</div>
+		<div class="form-container sign-in-container">
+			<form action="#">
+				<h2>Markup</h2>
+				<div class="social-container">
+					<label for="custo0">Custo</label>
+					<input class="input-medium focused span6 calc" name="custo0" id="custo0" type="text"
+						placeholder="0,00" value="" />
+					<label for="markup0">Markup</label>
+					<input class="input-medium focused span6 calc" name="markup0" id="markup0" type="text"
+						placeholder="0,00" value="" />
+					<label for="venda0">Venda</label>
+					<input class="input-medium focused span6 result" name="venda0" id="venda0" readonly="readonly"
+						type="text" placeholder="0,00" value="" />
+					<div>Outros Valores</div>
+					<label for="taxa0">Taxa%</label>
+					<input class="input-medium focused span6 calc" name="taxa0" id="taxa0" type="text"
+						placeholder="0,00" value="" />
+					<label for="frete0">Frete</label>
+					<input class="input-medium focused span6 calc" name="frete0" id="frete0" type="text"
+						placeholder="0,00" value="" />
+					<label for="margem0">Margem</label>
+					<input class="input-medium focused span6 calc" name="margem0" id="margem0" readonly="readonly"
+						type="text" placeholder="0,00" value="" />
+					<button type="reset">Limpar</button>
+				</div>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Margem?</h1>
+					<p>Margem de lucro é um valor absoluto, cujo cálculo é feito com o preço de venda já formado,
+						mostrando qual foi a rentabilidade obtida.</p>
+					<button class="ghost" id="signIn">Markup?</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Markup?</h1>
+					<p>Markup é um indicador, calculado em percentual, que auxilia a formar o preço de venda.</p>
+					<button class="ghost" id="signUp">Margem?</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<script src="js/js_1.9/jquery-1.8.2.min.js" type="text/javascript"></script>                
-        <script type="text/javascript">    
-            
-            $(document).ready(function(){
-                //Quando o valor do campo mudar...
-                $('.calc').keyup(function(){
-                    var custo0 = parseFloat($('#custo0').val().replace(".", "").replace(",", ".")) || 0.00;
-                    var markup0 = parseFloat($('#markup0').val().replace(".", "").replace(",", ".")) || 0.00;
-                    var taxa0 = parseFloat($('#taxa0').val().replace(".", "").replace(",", ".")) || 0.00;
-                    var frete0 = parseFloat($('#frete0').val().replace(".", "").replace(",", ".")) || 0.00;
+	<script src="js/js_1.9/jquery-1.8.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
 
-					var custo = parseFloat($('#custo').val().replace(".", "").replace(",", ".")) || 0.00;
-                    var margem = parseFloat($('#margem').val().replace(".", "").replace(",", ".")) || 0.00;
-                    var taxa = parseFloat($('#taxa').val().replace(".", "").replace(",", ".")) || 0.00;
-                    var frete = parseFloat($('#frete').val().replace(".", "").replace(",", ".")) || 0.00;
+		$(document).ready(function () {
+			//Quando o valor do campo mudar...
+			$('.calc').keyup(function () {
+				var custo0 = parseFloat($('#custo0').val().replace(".", "").replace(",", ".")) || 0.00;
+				var markup0 = parseFloat($('#markup0').val().replace(".", "").replace(",", ".")) || 0.00;
+				var taxa0 = parseFloat($('#taxa0').val().replace(".", "").replace(",", ".")) || 0.00;
+				var frete0 = parseFloat($('#frete0').val().replace(".", "").replace(",", ".")) || 0.00;
 
-                    //calculos
-                    var valor_markup = custo0 * markup0 / 100;
-                    var f12 = custo0 + valor_markup;
-                    var f13 = f12 + frete0;
-                    var i11 = (100 - taxa0) / 100;
-                    var d7 = f13 / i11;
-                    var valor_taxa0 = d7 * taxa0 / 100;
-                    var cmv = custo0 + frete0 + valor_taxa0;
+				var custo = parseFloat($('#custo').val().replace(".", "").replace(",", ".")) || 0.00;
+				var margem = parseFloat($('#margem').val().replace(".", "").replace(",", ".")) || 0.00;
+				var taxa = parseFloat($('#taxa').val().replace(".", "").replace(",", ".")) || 0.00;
+				var frete = parseFloat($('#frete').val().replace(".", "").replace(",", ".")) || 0.00;
 
-					var lucro = (margem / 100);
-					var valor_margem = custo / (lucro - 1) * -1;
-                    var f12b = valor_margem;
-                    var f13b = f12b + frete;
-                    var i11b = (100 - taxa) / 100;
-                    var d7b = f13b / i11b;
-                    var valor_taxa = d7b * taxa / 100;
-                    var cmvB = custo - d7b;
-                    
-                    //O total 
-                    var venda0 = d7;
-                    var margem0 = 100 - (cmv / d7) * 100;
-    
-                    $('#venda0').val(number_format(venda0,2, ',', '.'));
-                    $('#margem0').val(number_format(margem0,2, ',', '.'));
+				//calculos
+				var valor_markup = custo0 * markup0 / 100;
+				var f12 = custo0 + valor_markup;
+				var f13 = f12 + frete0;
+				var i11 = (100 - taxa0) / 100;
+				var d7 = f13 / i11;
+				var valor_taxa0 = d7 * taxa0 / 100;
+				var cmv = custo0 + frete0 + valor_taxa0;
 
-					var venda = d7b;
-                    var markup = (cmvB / custo * 100) * -1;
-    
-                    $('#venda').val(number_format(venda,2, ',', '.'));
-                    $('#markup').val(number_format(markup,2, ',', '.'));
-    
-                });
-            });
-    
-        function number_format( number, decimals, dec_point, thousands_sep ) {
-        var n = number, c = isNaN(decimals = Math.abs(decimals)) ? 2 : decimals;
-        var d = dec_point == undefined ? "," : dec_point;
-        var t = thousands_sep == undefined ? "." : thousands_sep, s = n < 0 ? "-" : "";
-        var i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0;
-        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");}
-            
-        </script>
+				var lucro = (margem / 100);
+				var valor_margem = custo / (lucro - 1) * -1;
+				var f12b = valor_margem;
+				var f13b = f12b + frete;
+				var i11b = (100 - taxa) / 100;
+				var d7b = f13b / i11b;
+				var valor_taxa = d7b * taxa / 100;
+				var cmvB = custo - d7b;
 
-<footer>
-	<p>
-		Criado com por - Leia como eu criei isso e como você pode participar do desafio
-	</p>
-</footer>
-<script type="text/javascript" src="js/formulario.js"></script>
+				//O total 
+				var venda0 = d7;
+				var margem0 = 100 - (cmv / d7) * 100;
+
+				$('#venda0').val(number_format(venda0, 2, ',', '.'));
+				$('#margem0').val(number_format(margem0, 2, ',', '.'));
+
+				var venda = d7b;
+				var markup = (cmvB / custo * 100) * -1;
+
+				$('#venda').val(number_format(venda, 2, ',', '.'));
+				$('#markup').val(number_format(markup, 2, ',', '.'));
+
+			});
+		});
+
+		function number_format(number, decimals, dec_point, thousands_sep) {
+			var n = number, c = isNaN(decimals = Math.abs(decimals)) ? 2 : decimals;
+			var d = dec_point == undefined ? "," : dec_point;
+			var t = thousands_sep == undefined ? "." : thousands_sep, s = n < 0 ? "-" : "";
+			var i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0;
+			return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+		}
+
+	</script>
+
+	<footer>
+		<p>
+			Criado com por - Leia como eu criei isso e como você pode participar do desafio
+		</p>
+	</footer>
+	<script type="text/javascript" src="js/formulario.js"></script>
 </body>
+
 </html>
