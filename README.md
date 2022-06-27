@@ -1,2 +1,0 @@
-# calc
- calculadora de lucro
